@@ -1,0 +1,28 @@
+package tugas5.pkg1;
+
+import java.util.Scanner;
+
+public class Tugas51 {
+
+    public static void main(String[] args) {
+        System.out.print("Masukkan bilangan : ");
+        boolean hasil = true;
+        Scanner input = new Scanner(System.in);
+        int x = input.nextInt(); 
+        for (int i = 2; i < x; i++) {
+            if (x%i==0) {
+                hasil = false;
+                break;
+            }
+        }
+        if(hasil)
+        {
+        System.out.println(x + " adalah Bilangan prima");
+        }
+        else
+        {
+        System.out.println(x + " bukan termasuk bilangan prima");
+        }
+    }
+    
+}

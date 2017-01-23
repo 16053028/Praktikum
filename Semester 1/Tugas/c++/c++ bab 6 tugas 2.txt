@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+#define MaxKalimat 100
+
+int main()
+{
+    char Kalimat[MaxKalimat];
+    cout << "Input  \t=> ";
+    cin.getline(Kalimat, MaxKalimat);
+    cout << "Output \t => ";
+    for(int x=0; Kalimat[x]; x++)
+    {
+        if(Kalimat[x]==' ')
+        {
+            Kalimat[x] = '\n';
+        }
+        cout << Kalimat[x];
+    }
+    return 0;
+}

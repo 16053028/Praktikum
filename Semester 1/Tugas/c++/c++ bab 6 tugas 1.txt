@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <map>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    map < char, int > wordCount; string msg;
+    cout << "Input \t: ";
+    getline(cin,msg);
+    ofstream
+    output("filename");
+    output<<msg;
+    output.close();
+    ifstream input("filename");
+    char word;
+    while(input >> word){
+        ++wordCount[word];
+    }
+    cout << "Output \t: ";
+    for(map<char, int>::iterator it = wordCount.begin();it != wordCount.end();++it){
+        cout << it->first << " = " << it->second << ", ";
+    }
+    input.close();
+}

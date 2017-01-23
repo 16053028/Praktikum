@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int penjumlahan_deret(int batas)
+{
+    int sum;
+    sum = 0;
+    cout << "Jumlah deret 1" << " - " << batas << " = " << endl;
+    for(int x=1; x<=batas; x++){
+        sum = sum + x;
+    }
+    for(int x=1; x<=batas; x++){
+        cout << x;
+        if(x==batas){
+            cout << " = " <<sum;
+        }
+        else{
+            cout << " + ";
+        }
+    }
+
+    return sum;
+}
+
+int main()
+{
+    int bilangan_akhir;
+    cout << "Masukkan bilangan akhir deret : ";
+    cin >> bilangan_akhir;
+    penjumlahan_deret(bilangan_akhir);
+    return 0;
+}

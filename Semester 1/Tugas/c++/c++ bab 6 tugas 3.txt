@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int main()
+{
+    char Kalimat[100];
+    cout << "Masukkan Kalimat = ";
+    cin.getline(Kalimat, 100);
+    cout << "Kalimat sebelum dibalik = " << Kalimat << endl << endl;
+    cout << "Kalimat setelah dibalik = " << strrev(Kalimat) << endl << endl;
+}

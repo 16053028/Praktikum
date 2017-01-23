@@ -1,0 +1,47 @@
+package tugas3.pkg1;
+
+import java.util.Scanner;
+
+public class Tugas31 {
+
+    public static void main(String[] args) {
+        int a, b, c;
+        double x, x1, x2;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Menghitung Nilai Determinan dan Mencari Akar Persamaan Kuadrat");
+        System.out.print("Masukkan Nilai A = ");
+        a = input.nextInt();
+        System.out.print("Masukkan Nilai B = ");
+        b = input.nextInt();
+        System.out.print("Masukkan Nilai C = ");
+        c = input.nextInt();
+        
+        System.out.print("Persamaan Yang Terbentuk = ");
+        System.out.print(a + "x^2 ");
+        if(b < 0) {
+            System.out.print("- " + (-b) + "x ");
+        } else if(b > 0) {
+                System.out.print("+ " + b + "x ");
+                } if(c < 0 ) {
+            System.out.print("- " + (-c) + " = 0");
+        } else if(c > 0) {
+            System.out.print("+ " + c + " = 0");
+        } else {
+            System.out.println(" = 0");
+        }
+        x = b * b - (4 * a * c);
+        System.out.println("\nDeterminan = " + x);
+        if(x == 0) {
+            x1 = -b /(2 * a);
+            System.out.println("Memiliki akar persamaan x1 = x2 = " + x1);
+        } else if(x<0) {
+            System.out.println("Akar-akar persamaan adalah bilangan yang tidak memiliki nilai real");
+            System.out.println("Atau bisa disebut bilangan khayal (Bilangan Imajiner)");
+        } else {
+            x1 = (-b + Math.pow(x,0.5))/(2 * a);
+            x2 = (-b - Math.pow(x,0.5))/(2 * a);
+            System.out.println("Memiliki akar persamaan x1 = " + 1 + " dan x2 = " + x2);
+        }
+    }
+    
+}

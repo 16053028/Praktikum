@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{ // pembuka masukkan
+    int bilangan;
+    cout << "Masukkan bilangan = ";
+    cin >> bilangan;
+    cout << " Bilangan yang baru saja anda masukkan adalah = " << bilangan;
+    return 0;
+} // penutup masukkan

@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+
+using namespace std;
+
+void toBinary(int num)
+{
+    int r, i=0, arr[64];
+    while(num!=0)
+    {
+    r = num%2;
+    arr[i++] = r;
+    num /= 2;
+    }
+    cout << "Bilangan biner dari " << num << " adalah = ";
+    for(int j=i-1;j>=0;j--)
+    cout<<arr[j];
+}
+
+int main()
+{
+    int decimal;
+    cout << "Masukkan bilangan decimal = ";
+    cin >> decimal;
+    toBinary(decimal);
+}

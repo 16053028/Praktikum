@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std; //deklarasi kamus c++ untuk penggunaan cout dan cin dll
+
+int main()
+{
+    cout << "UNIVERSITAS WIJAYA PUTRA ";
+    cout << endl;
+    cout << " Jurusan Teknik Informatika";
+    return 0;
+}

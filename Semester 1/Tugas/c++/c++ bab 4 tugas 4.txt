@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Pola 1" << endl;
+    for(int x=1;x<=10;x++){
+        cout << endl;
+        for(int y=x;y<=10;y++){
+        cout << y << " ";
+        }
+    }
+
+    cout << endl << "\nPola 2\n";
+    for (int a=10;a>=1;a--){
+        cout << endl;
+        for (int b=a;b>=1;b--){
+            cout << b << " ";
+        }
+    }
+
+    cout << endl << "\nPola 3\n";
+    for (int x=1;x<=10;x++){
+            cout << endl;
+        for (int y=1;y<=x;y++){
+            cout << x << " ";
+        }
+    }
+
+    cout << endl << "\nPola 4\n";
+    for (int a=10;a>=1;a--){
+        cout << endl;
+        for (int b=1;b<=a;b++){
+            cout << b << " ";
+        }
+    }
+    return 0;
+}

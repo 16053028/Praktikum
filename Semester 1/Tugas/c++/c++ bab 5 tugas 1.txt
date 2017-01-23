@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+char WordArr[13]={'u','n','i','v','e','r','s','t','w','j','a','y','p'};
+char SearchWord;
+
+int main()
+{
+    int x, IndexWord;
+    cout << "Masukkan Karakter Yang dicari = ";
+    cin >> SearchWord;
+    for (x=0; x<13; x++)
+    {
+        if(SearchWord == WordArr[x])
+        {
+            IndexWord = x+1;
+            cout << "Karakter "
+                 << SearchWord
+                 << " Di temukan pada indek ke-"
+                 << IndexWord;
+            break;
+        }
+    }
+    if (x == 13)
+        {
+            cout << "Karakter "
+                 << SearchWord
+                 << " Tidak Di temukan";
+        }
+    return 0;
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+#include <bitset>
+
+using namespace std;
+
+int main()
+{
+    int a = 112;
+    string has = bitset<32>(-a).to_string();
+    cout << has;
+    return 0;
+}

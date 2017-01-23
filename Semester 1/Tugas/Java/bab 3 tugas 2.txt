@@ -1,0 +1,26 @@
+package tugas3.pkg2;
+
+import java.util.Scanner;
+
+public class Tugas32 {
+
+    public static void main(String[] args) {
+        String x = "Adalah Tahun Kabisat";
+        String y = "Bukan Tahun Kabisat";
+        int a;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Menentukan Tahun Kabisat");
+        System.out.print("\nMasukkan Tahun (1900-2005) = ");
+        a = input.nextInt();
+        if(a<1900){
+            System.out.println("Maaf, tahun input di bawah 1900");
+        } else if(a>2005) {
+            System.out.println("Maaf, taun input di atas 2005");
+        } else if(a%4==0) {
+            System.out.println(a + " " + x);
+        } else {
+            System.out.println(a + " " + y);
+        }
+    }
+    
+}

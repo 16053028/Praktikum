@@ -1,0 +1,53 @@
+package tugas1.pkg2;
+
+import java.util.Scanner;
+
+public class Tugas12 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int JamAwal,MenitAwal,JamAkhir,MenitAkhir;
+        int Menit = 60;
+         int JumlahMenitAwal,JumlahMenitAkhir, Hasil;
+         System.out.print("Masukkan Jam Awal = ");
+         JamAwal = input.nextInt();
+         for (int a=0;JamAwal>24;a++){
+            System.out.println("\nJam yang anda masukkan lebih besar dari 24."
+                               + "\nHarap masukkan kembali.");
+            System.out.print("Masukkan Jam Awal = ");
+            JamAwal = input.nextInt();
+         }
+         System.out.print("Masukkan Menit Awal = ");
+         MenitAwal = input.nextInt();
+         for (int a=0;MenitAwal>60;a++){
+            System.out.println("Menit Awal yang anda masukkan lebih besar dari 60."
+                                + "\nHarap masukkan kembali.");
+            System.out.print("Masukkan Menit Awal = ");
+            MenitAwal = input.nextInt();    
+         }
+         System.out.print("Masukkan Jam Akhir = ");
+         JamAkhir = input.nextInt();
+         for (int a=0;JamAkhir>24;a++){
+            System.out.println("Jam yang anda masukkan lebih besar dari 24."
+                               + "\nHarap masukkan kembali.");
+            System.out.print("Masukkan Jam Akhir = ");
+            JamAkhir = input.nextInt();    
+         }
+         System.out.print("Masukkan Menit Akhir = ");
+         MenitAkhir = input.nextInt();
+         for (int a=0;MenitAkhir>60;a++){
+            System.out.println("Menit Akhir yang anda masukkan lebih besar dari 60."
+                                + "\nHarap masukkan kembali.");
+            System.out.print("Masukkan Menit Akhir = ");
+            MenitAkhir = input.nextInt();    
+         }
+         if (JamAwal>JamAkhir){
+             JamAkhir=(24+JamAkhir);
+         }
+         JumlahMenitAwal = JamAwal*Menit+MenitAwal;
+         JumlahMenitAkhir = JamAkhir*Menit+MenitAkhir;
+         Hasil = JumlahMenitAkhir-JumlahMenitAwal;
+         System.out.println("Selisih Durasi = " + Hasil + " Menit");
+    }
+    
+}

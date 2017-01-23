@@ -1,0 +1,11 @@
+package tugas2.pkg2;
+
+public class Tugas22 {
+
+    public static void main(String[] args) {
+        byte a=-1, has;
+        has = (byte) (a >>> 2); // oprasi shift ke kanan sebanya nol kali
+        System.out.println(has);
+    }
+    
+}

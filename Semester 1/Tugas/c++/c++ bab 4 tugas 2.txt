@@ -1,0 +1,19 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+    int Batas_Awal = 10, Batas_Akhir = 100;
+    int temp=0;
+    for(int x = Batas_Awal;x<Batas_Akhir;x++){
+        if(x%4==0)continue;
+        if(x%2==0){
+            cout << x << " ";
+            temp+=1;
+        }
+    }
+    cout << "\nJumlah bilangan genap dari " << Batas_Awal << " samapai " << Batas_Akhir ;
+    cout << " yang bukan kelipatan 4 adalah " << temp;
+    return 0;
+}

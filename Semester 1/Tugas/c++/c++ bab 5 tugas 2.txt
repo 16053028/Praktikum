@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int Matrik[2][2]={};
+
+int main()
+{
+    cout << "Masukkan Isi data Matrik : " << endl;
+    for (int x=0; x<2; x++)
+    {
+        for (int z=0; z<2; z++)
+        {
+            cout << "Masukkan Baris data baris ke-"<<(x+1)
+                 << " Kolom ke-"<<(z+1)<<" = ";
+            cin >> Matrik[x][z];
+        }
+    }
+    cout << endl << endl;
+    cout << "Hasil Matrik dengan ordo 2x2 = " << endl <<endl;
+    for (int x=0; x<2; x++)
+    {
+        cout << "|\t";
+        for (int z=0; z<2; z++)
+        {
+            cout << Matrik[x][z] << "\t";
+        }
+        cout << "|";
+        cout << endl;
+    }
+    return 0;
+}

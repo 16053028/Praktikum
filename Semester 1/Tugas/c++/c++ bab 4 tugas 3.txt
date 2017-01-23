@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int N, X, Hasil = 0, Temp = 1;
+    cout << "Masukkan Bilangan N = ";
+    cin >> N;
+    cout << "Masukkan Pangkat X = ";
+    cin >> X;
+    for (int x=0; x<X; x++)
+    {
+        Temp = Temp*N;
+        Hasil = Temp;
+    }
+    cout << "Hasil dari "
+         << N
+         << " Pangkat "
+         << X
+         << " Adalah "
+         << Hasil;
+    return 0;
+}

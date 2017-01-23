@@ -1,0 +1,10 @@
+package tugas1.pkg1;
+
+public class Tugas11 {
+
+
+    public static void main(String[] args) {
+        long p = 2147483648L;//untuk bilangan bertipe long harus di akhiri dengan L
+    }
+    
+}

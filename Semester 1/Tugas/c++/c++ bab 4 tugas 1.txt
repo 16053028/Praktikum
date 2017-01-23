@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Fibonacci,y=0,z=1,x=0;
+    cout << "Masukkan berapa deret Fibonacci = ";
+    cin >> Fibonacci;
+    cout << Fibonacci << " deret Fibonacci = ";
+    for(int i=0;i<Fibonacci;i++){
+        y = z;
+        z = x;
+        x = y + z;
+        cout << x << "  ";
+    }
+    return 0;
+}

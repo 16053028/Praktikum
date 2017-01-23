@@ -1,0 +1,78 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    {
+    int Bunga,Bulan,Input;
+    int Kredit=20000000,
+          Angsuran=500000,
+          TotalAngsuran=0,
+          TotalBunga=0,
+          SisaKredit=0,
+          TotalTagihan=0,
+          TotalPembayaran=0;
+    cout<<"Masukkan bulan ke-N = ";
+    cin>>Input;
+    Bulan=Kredit/Angsuran;
+    if(Input<Bulan)
+    {
+        for(int x=1; x<=Input; x++)
+        {
+            SisaKredit=Kredit-TotalAngsuran;
+            Bunga=SisaKredit*1/100;
+            TotalAngsuran=TotalAngsuran+Angsuran;
+            TotalBunga=TotalBunga+Bunga;
+            TotalTagihan=Bunga+Angsuran;
+        }
+        SisaKredit=Kredit-TotalAngsuran;
+        cout<<"Bunga yang harus dibayar pada bulan ke-"
+ 	  <<Input
+                <<" Adalah Rp "
+                <<Bunga
+                <<endl;
+        cout<<"Tagihan yang harus dibayar pada bulan ke-"
+                <<Input
+                <<" Adalah Rp "
+                <<TotalTagihan
+                <<endl;
+        cout<<"Hutang pokok yang sudah dibayarkan sampai bulan ke-"
+                <<Input
+                <<" Adalah Rp "
+                <<TotalAngsuran
+                <<endl;
+        cout<<"Bunga yang sudah dibayarkan sampai bulan ke-"
+                <<Input
+                <<" Adalah Rp "
+                <<TotalBunga
+                <<endl;
+        cout<<"Sisa hutang sampai bulan ke-"
+                <<Input
+                <<" Adalah Rp "
+                <<SisaKredit
+                <<endl;
+    }
+    else if(Input>Bulan)
+    {
+        for(int x=1; x<=Bulan; x++)
+        {
+            SisaKredit=Kredit-TotalAngsuran;
+            Bunga=SisaKredit*1/100;
+            TotalAngsuran=TotalAngsuran+Angsuran;
+            TotalBunga=TotalBunga+Bunga;
+        }
+        TotalPembayaran=Kredit+TotalBunga;
+        cout<<"Hutang anda telah lunas pada bulan ke-"
+                <<Bulan
+                <<" dengan Total Pembayaran Rp "
+                <<TotalPembayaran
+                <<endl;
+    }
+    else
+    {
+        cout<<"Hutang anda lunas pada bulan ini.";
+    }
+    return 0;
+}
+}

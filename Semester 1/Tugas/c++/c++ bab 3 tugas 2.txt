@@ -1,0 +1,86 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Jenis_Pembayaran,tipe_rumah,Uang_Muka,Tagihan;
+    int Sisa,Bunga,Tahun,Bulan,Pokok,Total,Administrasi,Cicilan;
+    cout << "Pilih jenis pembayaran";
+    cout << "\n1. Tunai";
+    cout << "\n2. Kredit";
+    cout << "\nMasukkan kode jenis pembayaran yang dipilih = ";
+    cin >> Jenis_Pembayaran;
+    cout << "\nPilih Tipe";
+    cout << "\n1. Tipe 36";
+    cout << "\n2. Tipe 45";
+    cout << "\nMasukkan kode tipe rumah yang dipilih = ";
+    cin >> tipe_rumah;
+    cout << endl;
+    if(Jenis_Pembayaran==1){
+        switch(tipe_rumah){
+            case 1 : cout << "\tTipe 36";
+            cout << "\nHarga pokok rumah : Rp 250000000";
+            Pokok = 250000000;
+            Administrasi = (Pokok*2)/100;
+            cout << "\nUang administrasi : Rp " << Administrasi;
+            Total = Pokok + Administrasi;
+            cout << "\nTotal pembayaran : Rp " << Total;
+            break;
+
+            case 2 : cout << "\tTipe 45";
+            cout << "\nHarga pokok rumah : Rp 300000000";
+            Pokok = 300000000;
+            Administrasi = (Pokok*2.5)/100;
+            cout << "\nUang administrasi : Rp " << Administrasi;
+            Total = Pokok + Administrasi;
+            cout << "\nTotal pembayaran : Rp " << Total;
+            break;
+            }
+        } else if(Jenis_Pembayaran == 2){
+            switch(tipe_rumah){
+            case 1 : cout << "\tTipe36";
+            cout << "\nHarga pokok rumah : Rp 250000000";
+            cout << "\nInput uang muka : Rp ";
+            cin >> Uang_Muka;
+            cout << "Input Jangka cicilan (tahun) : ";
+            cin >> Tahun;
+            cout << "\n\n\tDETAIL PEMBAYARAN";
+            Pokok = 250000000;
+            Administrasi = (Pokok*2)/100;
+            cout << "\nUang administrasi : Rp " << Administrasi;
+            Bulan = Tahun*12;
+            Sisa = Pokok - Uang_Muka;
+            Bunga = ((Sisa*1)/100)-1;
+            cout << "\nBunga per bulan : Rp " << Bunga;
+            Cicilan = Sisa/Bulan;
+            Tagihan = Cicilan + Bunga;
+            cout << "\nTagihan per bulan : Rp " << Tagihan;
+            Total = (Tagihan*Bulan) + Administrasi + Uang_Muka;
+            cout << "\nTotal pembayaran : Rp " << Total;
+            break;
+
+            case 2 : cout << "\tTipe 45";
+            cout << "\nHarga pokok rumah : Rp 300000000";
+            cout << "\nInput uang muka : Rp ";
+            cin >> Uang_Muka;
+            cout << "Input Jangka cicilan (tahun) : ";
+            cin >> Tahun;
+            cout << "\n\n\tDETAIL PEMBAYARAN";
+            Pokok = 300000000;
+            Administrasi = (Pokok*2.5)/100;
+            cout << "\nUang administrasi : Rp " << Administrasi;
+            Bulan = Tahun*12;
+            Sisa = Pokok - Uang_Muka;
+            Bunga = ((Sisa*1)/100);
+            cout << "\nBunga per bulan : Rp " << Bunga;
+            Cicilan = Sisa/Bulan;
+            Tagihan = Cicilan + Bunga;
+            cout << "\nTagihan per bulan : Rp " << Tagihan;
+            Total = (Tagihan*Bulan) + Administrasi + Uang_Muka;
+            cout << "\nTotal pembayaran : Rp " << Total;
+            break;
+            }
+        }
+return 0;
+}

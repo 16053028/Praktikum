@@ -1,0 +1,38 @@
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+
+
+int main()
+{
+    string kata="";
+    int jumlah;
+    int c;
+    char Kalimat[60];
+    cout << "Input  \t=> ";
+    cin.getline(Kalimat, 60);
+    cout << "Output \t => ";
+    jumlah=strlen(Kalimat);
+
+
+    for(int x=0; x<=jumlah; x++)
+    {
+        kata=Kalimat[x]+kata;
+
+        if(Kalimat[x]==' ')
+        {
+
+            c=x;
+        }
+
+        if(c==x || x==jumlah){
+            cout<<kata<<" ";
+            kata=" ";
+        }
+
+    }
+
+
+    return 0;
+}

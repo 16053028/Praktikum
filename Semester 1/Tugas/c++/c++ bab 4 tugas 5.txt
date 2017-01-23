@@ -1,0 +1,72 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int hold;
+char white=255,black=219,CKrA=191,BKrB=192,CKnA=218,BKnB=217,BA=196,BK=179;
+    int x,z;
+    int input;
+    cin>>input;
+    cout<<CKnA;
+    x++;
+    if(x>1)
+
+    {
+        for(int z=1;z<=input;z++)
+        {
+            cout<<BA;
+        }
+        cout<<CKrA;
+    }
+    cout<<endl;
+for(int x=0;x<input;x++)
+{
+    cout<<BK;
+    if (x%2==0)
+    {
+        for (int z=0;z<input;z++)
+        {
+            if (z%2==0)
+            {
+                cout<<black;
+            }
+            else
+            {
+                cout<<white;
+            }
+        }
+        cout<<BK;
+        cout<<endl;
+    }
+    else
+    {
+        for (int z=0;z<input;z++)
+        {
+            if (z%2==0)
+            {
+                cout<<white;
+            }
+            else
+            {
+                cout<<black;
+            }
+        }
+        cout<<BK;
+        cout<<endl;
+    }
+}
+    cout<<BKrB;
+    z++;
+    if(x>1)
+    {
+        for(int z=1;z<=input;z++)
+        {
+            cout<<BA;
+        }
+        cout<<BKnB;
+    }
+cout<<endl<<endl<<endl;
+return 0;
+}

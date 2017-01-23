@@ -1,0 +1,16 @@
+package tugas2.pkg1;
+
+import java.util.Scanner;
+
+public class Tugas21 {
+
+    public static void main(String[] args) {
+        int bit = 19;
+        System.out.println("Susunan bit dari " + bit + " " + Integer.toBinaryString(bit));
+        // representasi nilai bit dari 19 adalah 10011
+        System.out.println("Susunan bit dari " + -bit + " " + Integer.toBinaryString(~bit+1));
+        // representasi nilai bit dari -19 adalah kebalikan dari 19
+        // yaitu angka 0 menjadi 1 dan 1 menjadi 0 kemudian ditambah 1
+        // jadi 01101
+    }
+}
